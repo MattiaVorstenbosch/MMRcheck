@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EasyHTTP2 Example</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 70vh;
+            flex-direction: column;
+            background: url("images/bg.jpg") no-repeat center center;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        main {
+          flex: 1 0 auto;
+          background-color: white;
+        }
+
+        .errorMsg {
+            color: red;
+        }
+
+    </style>
+    <header>
+
+    </header>
+    <main>
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h1 style="color: #ee6e73;">MMRcheck</h1>
+                </div>
+            </div>
+            <div class="row">
+              <form class="col s12" id="steamForm">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <i class="material-icons prefix">person</i>
+                    <input id="icon_prefix" class="steamID" type="text">
+                    <label for="icon_prefix">Steam ID (e.g. 70347572)</label>
+                    <p class="errorMsg"></p>
+                  </div>
+                  <div class="col s6">
+                      <button class="btn waves-effect waves-light" type="submit" id="checkMMR">Check MMR</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col s12 m7">
+              <h4 class="header" style="color: #ee6e73;">Your MMR</h4>
+              <div class="card horizontal">
+                <div class="card-image">
+                  <img id="steamAvatar" src="">
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <a id="steamIDLink" href="" target="_blank"><h5 id="tagName"></h5></a>
+                    <p id="soloMMR"></p>
+                    <p id="teamMMR"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">MMR Check</h5>
+            <p class="grey-text text-lighten-4">The simple and quick way to check your real MMR.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <!-- <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2018 MMR Check
+        <a class="grey-text text-lighten-4 right" href="http://mattiavorstenbosch.nl">by Mattia Vorstenbosch</a>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="easyhttp2.js"></script>
+    <script src="app.js"></script>
+    <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+
+</html>
