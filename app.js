@@ -27,8 +27,8 @@ document.querySelector('#steamForm').addEventListener('submit', (e) => {
     if(inputValue != '') {
         let steamID = inputValue.value;
         // Get Users
-        // const user = http.get('https://api.opendota.com/api/players/' + inputValue + '')
-        const user = http.get('https://api.opendota.com/api/live')
+        const user = http.get('https://api.opendota.com/api/players/' + inputValue + '')
+        // const user = http.get('https://api.opendota.com/api/live')
             .then(data => {
                 console.log(data);
                 soloMMR.innerHTML = data.solo_competitive_rank;
