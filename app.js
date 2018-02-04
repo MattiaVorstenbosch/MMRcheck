@@ -23,9 +23,7 @@ document.querySelector('#steamForm').addEventListener('submit', (e) => {
     console.log(inputValue);
 
     if(inputValue != '') {
-        console.log('if works');
         let steamID = inputValue.value;
-
         // Get Users
         const user = http.get('https://api.opendota.com/api/players/' + inputValue + '')
             .then(data => {
@@ -34,10 +32,7 @@ document.querySelector('#steamForm').addEventListener('submit', (e) => {
                 steamAvatar.src = data.profile.avatarfull;
                 tagName.innerHTML = data.profile.personaname;
                 playerLink.href = data.profile.profileurl;
-
                 console.log(data);
-                console.log(data.profile.avatar);
-
             })
             .catch(err => soloMMR.innerHTML = 'Something went wrong');
 
